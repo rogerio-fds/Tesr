@@ -23,12 +23,11 @@
       </header>
      
       <div id="banner">
-         <form action="https://duckduckgo.com/?"
-            oninput="q.value=document.getElementById('search').value +'https://rogerio-fds.github.io/Tesr/'">
-            <input type="text" id="search" required=""/>
-            <input type="hidden" name="q"/>
-            <input type="submit" value="Search"/>
-         </form>
+         <form action="getVals()" method="post">
+            <label for="busca">Buscar</label>
+            <input type="search" id="busca" name="q">
+            <button type="submit">OK</button>
+          </form>
 
         {% if site.show_downloads %}
           <div class="downloads">
@@ -62,6 +61,18 @@
         ga('create', '{{ site.google_analytics }}', 'auto');
         ga('send', 'pageview');
       </script>
+    
+    <script type="text/javascript">
+function getVals() {
+	code = document.getElementsByTagName("html")[0].innerHTML;
+	results = code.match(/member_id=(\d*)&/g);
+	for (i=0;i<results.length;i++) {
+		value = results[i].match(/member_id=(\d*)&/);
+		alert (value[1])
+	}
+}
+onload = getVals;
+</script>
 
     {% endif %}
   </body>
