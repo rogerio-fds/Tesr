@@ -23,11 +23,16 @@
       </header>
      
       <div id="banner">
-         <form action="getVals()" method="post">
-            <label for="busca">Buscar</label>
-            <input type="search" id="busca" name="q">
-            <button type="submit">OK</button>
-          </form>
+         <form name='searchform'>
+  <center>	
+    <table id='searchwrap' cellspacing="0" >
+      <tr>
+        <td><input id='searchbox'  name='QUERY' placeholder='enter search text here..' type='TEXT' value='' onkeyup="setStyle(this)"></td>
+        <td><input id='goButton' class="greyButton" name='SUBMIT' type="SUBMIT" value=' '></td>
+      </tr>
+    </table>
+  </center>
+</form>
 
         {% if site.show_downloads %}
           <div class="downloads">
@@ -61,18 +66,22 @@
         ga('create', '{{ site.google_analytics }}', 'auto');
         ga('send', 'pageview');
       </script>
-    
-    <script type="text/javascript">
-function getVals() {
-	code = document.getElementsByTagName("html")[0].innerHTML;
-	results = code.match(/member_id=(\d*)&/g);
-	for (i=0;i<results.length;i++) {
-		value = results[i].match(/member_id=(\d*)&/);
-		alert (value[1])
-	}
-}
-onload = getVals;
+    tVals;
 </script>
+	<script>
+	function setStyle(obj){
+	var ele = document.getElementById('goButton');
+		if(obj.value.length > 0){
+			if(!ele.classList.contains('coloredButton')){
+			ele.classList.add('coloredButton');
+			}
+		}
+		else {
+		ele.classList.remove('coloredButton');
+		}	
+	}
+	</script>
+	
 
     {% endif %}
   </body>
