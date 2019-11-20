@@ -7,7 +7,7 @@ Esta é a página que centraliza toda documentação das tabelas disponíveis no
 
 
 
-## Invoice Line
+# Invoice Line
 
 <h4>
 <p align="justify">
@@ -236,5 +236,7 @@ Esta é a página que centraliza toda documentação das tabelas disponíveis no
    - **Example Value**: 2
    - **Use case**: This field is mainly used to calculate the value of the Cost field by multiplying its value with that of the Unit Cost field.
   <br><br>
+  
+  
 
 
