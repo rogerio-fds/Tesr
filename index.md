@@ -1,13 +1,13 @@
 # Documentation
 
-This is the page that centralizes all documentation of the tables available in Looker. In the side menu you will find the links to access the wikis of each table.
+This is the page that centralizes all documentation of the tables available in Looker and Metabase. In the side menu you will find the links to access the wikis of each table.
 <br> <br> <br>
 
 
 
 
 
-# Invoice Line
+# Invoice Lines
 
 <h4>
 <p align="justify">
